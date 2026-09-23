@@ -1,3 +1,4 @@
+```css
 /* ============================== */
 /* CONFIGURACIÓN GENERAL */
 /* ============================== */
@@ -165,6 +166,74 @@ input:focus {
 
     box-shadow:
         0 0 0 2px rgba(40, 100, 232, 0.15);
+
+}
+
+
+/* ============================== */
+/* CAMPO DE CONTRASEÑA */
+/* ============================== */
+
+.password-container {
+
+    position: relative;
+
+    width: 100%;
+
+}
+
+
+/* El input ocupa todo el espacio */
+
+.password-container input {
+
+    width: 100%;
+
+    padding-right: 50px;
+
+}
+
+
+/* ============================== */
+/* BOTÓN VER CONTRASEÑA */
+/* ============================== */
+
+.ver-password {
+
+    position: absolute;
+
+    right: 12px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: auto;
+
+    margin: 0;
+
+    padding: 5px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+}
+
+
+/* Efecto al pasar el mouse */
+
+.ver-password:hover {
+
+    background: transparent;
+
+    transform: translateY(-50%) scale(1.1);
 
 }
 
@@ -427,3 +496,4 @@ footer p {
     }
 
 }
+```
