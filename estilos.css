@@ -1,0 +1,429 @@
+/* ============================== */
+/* CONFIGURACIÓN GENERAL */
+/* ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #173b8f,
+        #2864e8
+    );
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #111;
+
+}
+
+
+/* ============================== */
+/* CONTENEDOR */
+/* ============================== */
+
+.contenedor {
+
+    width: 550px;
+
+    max-width: 90%;
+
+    text-align: center;
+
+}
+
+
+/* ============================== */
+/* TARJETAS */
+/* ============================== */
+
+.login,
+.otp,
+.password,
+.acceso {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.20);
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ============================== */
+/* LOGO */
+/* ============================== */
+
+.logo {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* ============================== */
+/* TÍTULOS */
+/* ============================== */
+
+h1 {
+
+    color: #1e4699;
+
+    margin-bottom: 10px;
+
+}
+
+
+h2 {
+
+    color: #1e4699;
+
+    margin-bottom: 15px;
+
+}
+
+
+h3 {
+
+    margin: 15px 0;
+
+}
+
+
+/* ============================== */
+/* TEXTOS */
+/* ============================== */
+
+.subtitulo {
+
+    color: #555;
+
+    margin-bottom: 25px;
+
+}
+
+
+.nota {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* ============================== */
+/* INPUTS */
+/* ============================== */
+
+input {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin: 8px 0;
+
+    border: 1px solid #ccd5e3;
+
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+input:focus {
+
+    border-color: #2864e8;
+
+    box-shadow:
+        0 0 0 2px rgba(40, 100, 232, 0.15);
+
+}
+
+
+/* ============================== */
+/* BOTÓN PRINCIPAL */
+/* ============================== */
+
+.boton {
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2864e8;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.boton:hover {
+
+    background: #1d4fc2;
+
+    transform: translateY(-1px);
+
+}
+
+
+/* ============================== */
+/* BOTÓN SECUNDARIO */
+/* ============================== */
+
+.boton-secundario {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 10px;
+
+    border: 1px solid #2864e8;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #2864e8;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+}
+
+
+.boton-secundario:hover {
+
+    background: #f1f5ff;
+
+}
+
+
+/* ============================== */
+/* MENSAJE VERDE */
+/* ============================== */
+
+.mensaje-exito {
+
+    background-color: #e8f8ef;
+
+    color: #168044;
+
+    border: 1px solid #63d69a;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin: 20px 0;
+
+    font-weight: 600;
+
+    text-align: center;
+
+}
+
+
+/* ============================== */
+/* CÓDIGO DE PRUEBA */
+/* ============================== */
+
+.codigo-prueba {
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    background: #f1f5ff;
+
+    border: 1px solid #b8caff;
+
+    border-radius: 10px;
+
+    color: #1e4699;
+
+}
+
+
+.codigo-prueba strong {
+
+    font-size: 22px;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* ============================== */
+/* ACCESO PERMITIDO */
+/* ============================== */
+
+.acceso-permitido {
+
+    background-color: #e8f8ef;
+
+    color: #168044;
+
+    border: 1px solid #63d69a;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+/* ============================== */
+/* ACCESO DENEGADO */
+/* ============================== */
+
+.acceso-denegado {
+
+    background-color: #fdeaea;
+
+    color: #c62828;
+
+    border: 1px solid #ef9a9a;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+/* ============================== */
+/* BARRA DE SEGURIDAD */
+/* ============================== */
+
+.barra {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #e1e7ef;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 15px;
+
+}
+
+
+#nivelPassword {
+
+    height: 100%;
+
+    width: 0%;
+
+    background: #2864e8;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+
+}
+
+
+/* ============================== */
+/* FOOTER */
+/* ============================== */
+
+footer {
+
+    color: white;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    padding-bottom: 20px;
+
+}
+
+
+footer p {
+
+    margin: 3px 0;
+
+}
+
+
+/* ============================== */
+/* RESPONSIVE */
+/* ============================== */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+
+        width: 95%;
+
+    }
+
+
+    .login,
+    .otp,
+    .password,
+    .acceso {
+
+        padding: 25px;
+
+    }
+
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Access - Ciberseguridad</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- ================================= -->
+        <!-- ANALIZADOR DE CONTRASEÑAS -->
+        <!-- ================================= -->
+
+        <div
+            class="password"
+            id="pantallaPassword">
+
+            <div class="logo">
+                🔑
+            </div>
+
+            <h1>Secure Access</h1>
+
+            <h2>Analizador de Contraseñas</h2>
+
+            <p class="subtitulo">
+
+                Antes de iniciar sesión, verifique la seguridad de su contraseña.
+
+            </p>
+
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Ingrese una contraseña">
+
+
+            <button
+                class="boton"
+                onclick="analizarPassword()">
+
+                Analizar contraseña
+
+            </button>
+
+
+            <!-- BARRA DE SEGURIDAD -->
+
+            <div class="barra">
+
+                <div id="nivelPassword"></div>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+
+            <div id="resultadoPassword">
+
+                <h3>Requisitos</h3>
+
+                <p>❌ Mínimo 8 caracteres.</p>
+
+                <p>❌ Al menos una letra mayúscula.</p>
+
+                <p>❌ Al menos una letra minúscula.</p>
+
+                <p>❌ Al menos un número.</p>
+
+                <p>❌ Al menos un símbolo.</p>
+
+
+                <hr>
+
+
+                <h3>Recomendaciones</h3>
+
+                <p>
+                    ⚠ Evite utilizar nombres, apellidos o datos personales.
+                </p>
+
+                <p>
+                    ⚠ No reutilice contraseñas anteriores.
+                </p>
+
+                <p>
+                    ⚠ Utilice una frase fácil de recordar y difícil de adivinar.
+                </p>
+
+            </div>
+
+
+            <!-- CONTINUAR -->
+
+            <button
+                id="botonContinuar"
+                class="boton"
+                onclick="irAlLogin()"
+                style="display:none;">
+
+                Continuar al inicio de sesión
+
+            </button>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- LOGIN -->
+        <!-- ================================= -->
+
+        <div
+            class="login"
+            id="pantallaLogin"
+            style="display:none;">
+
+            <div class="logo">
+                🔐
+            </div>
+
+            <h1>Inicio de sesión</h1>
+
+            <p class="subtitulo">
+
+                Ingrese sus credenciales para continuar.
+
+            </p>
+
+
+            <input
+                type="email"
+                id="correo"
+                placeholder="Correo electrónico">
+
+
+            <input
+                type="password"
+                id="clave"
+                placeholder="Contraseña">
+
+
+            <button
+                class="boton"
+                onclick="iniciarSesion()">
+
+                Iniciar sesión
+
+            </button>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- VERIFICACIÓN MFA -->
+        <!-- ================================= -->
+
+        <div
+            class="otp"
+            id="pantallaOTP"
+            style="display:none;">
+
+            <h2>
+                Verificación en dos pasos
+            </h2>
+
+
+            <p>
+
+                Se envió un código de verificación
+                al dispositivo registrado.
+
+            </p>
+
+
+            <p class="nota">
+
+                Esta es una simulación educativa.
+
+            </p>
+
+
+            <!-- MENSAJE VERDE -->
+
+            <div class="mensaje-exito">
+
+                ✅ El código fue enviado exitosamente.
+
+            </div>
+
+
+            <!-- CÓDIGO DE PRUEBA -->
+
+            <button
+                type="button"
+                class="boton-secundario"
+                onclick="mostrarCodigoPrueba()">
+
+                Ver código de prueba
+
+            </button>
+
+
+            <div id="codigoPrueba"></div>
+
+
+            <!-- INGRESAR OTP -->
+
+            <input
+                type="text"
+                id="otp"
+                placeholder="Ingrese el código OTP"
+                maxlength="6">
+
+
+            <button
+                class="boton"
+                onclick="verificarOTP()">
+
+                Verificar código
+
+            </button>
+
+
+            <div id="resultadoOTP"></div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- ACCESO FINAL -->
+        <!-- ================================= -->
+
+        <div
+            class="acceso"
+            id="pantallaAcceso"
+            style="display:none;">
+
+            <div class="logo">
+                🛡️
+            </div>
+
+            <h1>Acceso permitido</h1>
+
+            <p>
+
+                La autenticación multifactor
+                verificó correctamente la identidad.
+
+            </p>
+
+            <div class="mensaje-exito">
+
+                ✅ Identidad verificada correctamente.
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================= -->
+        <!-- FOOTER -->
+        <!-- ================================= -->
+
+        <footer>
+
+            <p>
+                Proyecto Integrador - Ciberseguridad
+            </p>
+
+            <p>
+                Autenticación Multifactor y Contraseñas Seguras
+            </p>
+
+            <p>
+                Desarrollado por Dayanna Montaño
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
