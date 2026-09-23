@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -22,9 +23,7 @@
         <!-- ANALIZADOR DE CONTRASEÑAS -->
         <!-- ================================= -->
 
-        <div
-            class="password"
-            id="pantallaPassword">
+        <div class="password" id="pantallaPassword">
 
             <div class="logo">
                 🔑
@@ -35,16 +34,26 @@
             <h2>Analizador de Contraseñas</h2>
 
             <p class="subtitulo">
-
                 Antes de iniciar sesión, verifique la seguridad de su contraseña.
-
             </p>
 
 
-            <input
-                type="password"
-                id="password"
-                placeholder="Ingrese una contraseña">
+            <!-- CONTRASEÑA CON BOTÓN VER -->
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Ingrese una contraseña">
+
+                <button
+                    type="button"
+                    class="ver-password"
+                    onclick="mostrarPassword('password', this)">
+                    👁️
+                </button>
+
+            </div>
 
 
             <button
@@ -133,9 +142,7 @@
             <h1>Inicio de sesión</h1>
 
             <p class="subtitulo">
-
                 Ingrese sus credenciales para continuar.
-
             </p>
 
 
@@ -145,10 +152,23 @@
                 placeholder="Correo electrónico">
 
 
-            <input
-                type="password"
-                id="clave"
-                placeholder="Contraseña">
+            <!-- CONTRASEÑA CON BOTÓN VER -->
+
+            <div class="password-container">
+
+                <input
+                    type="password"
+                    id="clave"
+                    placeholder="Contraseña">
+
+                <button
+                    type="button"
+                    class="ver-password"
+                    onclick="mostrarPassword('clave', this)">
+                    👁️
+                </button>
+
+            </div>
 
 
             <button
@@ -177,17 +197,13 @@
 
 
             <p>
-
                 Se envió un código de verificación
                 al dispositivo registrado.
-
             </p>
 
 
             <p class="nota">
-
                 Esta es una simulación educativa.
-
             </p>
 
 
@@ -254,10 +270,8 @@
             <h1>Acceso permitido</h1>
 
             <p>
-
                 La autenticación multifactor
                 verificó correctamente la identidad.
-
             </p>
 
             <div class="mensaje-exito">
@@ -292,8 +306,9 @@
     </div>
 
 
- <script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
 </html>
+```
