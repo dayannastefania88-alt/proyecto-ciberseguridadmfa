@@ -104,7 +104,7 @@ h3 {
 
 
 /* ============================== */
-/* INPUTS GENERALES */
+/* INPUTS */
 /* ============================== */
 
 input {
@@ -139,12 +139,8 @@ input:focus {
 
 .password-container {
     position: relative;
-
     width: 100%;
 }
-
-
-/* Input dentro del campo de contraseña */
 
 .password-container input {
     width: 100%;
@@ -158,10 +154,11 @@ input:focus {
 
 
 /* ============================== */
-/* BOTÓN MOSTRAR / OCULTAR */
+/* BOTÓN MOSTRAR CONTRASEÑA */
 /* ============================== */
 
 .password-container .ver-password {
+
     position: absolute;
 
     right: 10px;
@@ -171,11 +168,9 @@ input:focus {
     transform: translateY(-50%);
 
     width: 40px;
-
     height: 40px;
 
     margin: 0;
-
     padding: 0;
 
     border: none;
@@ -184,45 +179,30 @@ input:focus {
 
     color: #2864e8;
 
-    font-family: Arial, sans-serif;
-
     font-size: 20px;
-
-    line-height: 1;
 
     cursor: pointer;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     z-index: 10;
-
-    box-shadow: none;
 }
 
-
-/* Hover del ojito */
-
 .password-container .ver-password:hover {
+
     background: transparent;
 
     transform: translateY(-50%) scale(1.1);
-
-    box-shadow: none;
 }
 
-
-/* Cuando el botón recibe el clic */
-
 .password-container .ver-password:focus {
+
     outline: none;
 
     background: transparent;
-
-    box-shadow: none;
 }
 
 
@@ -231,6 +211,7 @@ input:focus {
 /* ============================== */
 
 .boton {
+
     width: 100%;
 
     padding: 15px;
@@ -257,6 +238,7 @@ input:focus {
 }
 
 .boton:hover {
+
     background: #1d4fc2;
 
     transform: translateY(-1px);
@@ -268,6 +250,7 @@ input:focus {
 /* ============================== */
 
 .boton-secundario {
+
     width: 100%;
 
     padding: 12px;
@@ -290,6 +273,7 @@ input:focus {
 }
 
 .boton-secundario:hover {
+
     background: #f1f5ff;
 }
 
@@ -299,6 +283,7 @@ input:focus {
 /* ============================== */
 
 .mensaje-exito {
+
     background-color: #e8f8ef;
 
     color: #168044;
@@ -322,6 +307,7 @@ input:focus {
 /* ============================== */
 
 .codigo-prueba {
+
     margin-top: 12px;
 
     padding: 12px;
@@ -336,6 +322,7 @@ input:focus {
 }
 
 .codigo-prueba strong {
+
     font-size: 22px;
 
     letter-spacing: 4px;
@@ -347,6 +334,7 @@ input:focus {
 /* ============================== */
 
 .acceso-permitido {
+
     background-color: #e8f8ef;
 
     color: #168044;
@@ -366,6 +354,7 @@ input:focus {
 /* ============================== */
 
 .acceso-denegado {
+
     background-color: #fdeaea;
 
     color: #c62828;
@@ -385,6 +374,7 @@ input:focus {
 /* ============================== */
 
 .barra {
+
     width: 100%;
 
     height: 12px;
@@ -399,6 +389,7 @@ input:focus {
 }
 
 #nivelPassword {
+
     height: 100%;
 
     width: 0%;
@@ -416,6 +407,7 @@ input:focus {
 /* ============================== */
 
 footer {
+
     color: white;
 
     font-size: 13px;
@@ -426,6 +418,7 @@ footer {
 }
 
 footer p {
+
     margin: 3px 0;
 }
 
@@ -437,6 +430,7 @@ footer p {
 @media (max-width: 600px) {
 
     .contenedor {
+
         width: 95%;
     }
 
@@ -444,6 +438,7 @@ footer p {
     .otp,
     .password,
     .acceso {
+
         padding: 25px;
     }
 
