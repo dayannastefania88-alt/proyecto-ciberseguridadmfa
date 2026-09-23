@@ -1,4 +1,3 @@
-```javascript
 // ==============================
 // VARIABLE OTP
 // ==============================
@@ -12,29 +11,28 @@ let codigoOTP = "";
 
 function analizarPassword() {
 
-    let password =
+    const password =
         document.getElementById("password").value;
 
     let resultado = "";
-
 
     // ==============================
     // COMPROBAR REQUISITOS
     // ==============================
 
-    let longitud =
+    const longitud =
         password.length >= 8;
 
-    let mayuscula =
+    const mayuscula =
         /[A-Z]/.test(password);
 
-    let minuscula =
+    const minuscula =
         /[a-z]/.test(password);
 
-    let numero =
+    const numero =
         /[0-9]/.test(password);
 
-    let simbolo =
+    const simbolo =
         /[^A-Za-z0-9]/.test(password);
 
 
@@ -46,21 +44,17 @@ function analizarPassword() {
         ? "✅ Mínimo 8 caracteres.<br>"
         : "❌ Mínimo 8 caracteres.<br>";
 
-
     resultado += mayuscula
         ? "✅ Tiene mayúscula.<br>"
         : "❌ Falta mayúscula.<br>";
-
 
     resultado += minuscula
         ? "✅ Tiene minúscula.<br>"
         : "❌ Falta minúscula.<br>";
 
-
     resultado += numero
         ? "✅ Tiene número.<br>"
         : "❌ Falta número.<br>";
-
 
     resultado += simbolo
         ? "✅ Tiene símbolo.<br>"
@@ -88,50 +82,26 @@ function analizarPassword() {
     // BARRA DE SEGURIDAD
     // ==============================
 
-    let barra =
+    const barra =
         document.getElementById("nivelPassword");
 
-
-    if (puntos === 0) {
-
-        barra.style.width = "0%";
-
-    } else if (puntos === 1) {
-
-        barra.style.width = "20%";
-
-    } else if (puntos === 2) {
-
-        barra.style.width = "40%";
-
-    } else if (puntos === 3) {
-
-        barra.style.width = "60%";
-
-    } else if (puntos === 4) {
-
-        barra.style.width = "80%";
-
-    } else {
-
-        barra.style.width = "100%";
-
-    }
+    barra.style.width = (puntos * 20) + "%";
 
 
     // ==============================
     // PERMITIR CONTINUAR
     // ==============================
 
+    const botonContinuar =
+        document.getElementById("botonContinuar");
+
     if (puntos === 5) {
 
-        document.getElementById("botonContinuar").style.display =
-            "block";
+        botonContinuar.style.display = "block";
 
     } else {
 
-        document.getElementById("botonContinuar").style.display =
-            "none";
+        botonContinuar.style.display = "none";
 
     }
 
@@ -159,10 +129,10 @@ function irAlLogin() {
 
 function iniciarSesion() {
 
-    let correo =
-        document.getElementById("correo").value;
+    const correo =
+        document.getElementById("correo").value.trim();
 
-    let clave =
+    const clave =
         document.getElementById("clave").value;
 
 
@@ -230,10 +200,10 @@ function mostrarCodigoPrueba() {
 
 function verificarOTP() {
 
-    let codigoUsuario =
-        document.getElementById("otp").value;
+    const codigoUsuario =
+        document.getElementById("otp").value.trim();
 
-    let resultado =
+    const resultado =
         document.getElementById("resultadoOTP");
 
 
@@ -242,7 +212,6 @@ function verificarOTP() {
     // ==============================
 
     if (codigoUsuario === codigoOTP.toString()) {
-
 
         resultado.innerHTML =
 
@@ -279,7 +248,6 @@ function verificarOTP() {
 
     } else {
 
-
         resultado.innerHTML =
 
             "<div class='acceso-denegado'>" +
@@ -307,19 +275,49 @@ function mostrarPassword(id, boton) {
         document.getElementById(id);
 
 
+    // Verificar que el campo exista
+
+    if (!campo) {
+
+        console.error("No se encontró el campo:", id);
+
+        return;
+
+    }
+
+
+    // ==============================
+    // MOSTRAR CONTRASEÑA
+    // ==============================
+
     if (campo.type === "password") {
 
         campo.type = "text";
 
         boton.textContent = "🙈";
 
-    } else {
+        boton.setAttribute(
+            "aria-label",
+            "Ocultar contraseña"
+        );
+
+    }
+
+    // ==============================
+    // OCULTAR CONTRASEÑA
+    // ==============================
+
+    else {
 
         campo.type = "password";
 
         boton.textContent = "👁️";
 
+        boton.setAttribute(
+            "aria-label",
+            "Mostrar contraseña"
+        );
+
     }
 
 }
-```
