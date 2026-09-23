@@ -1,3 +1,4 @@
+```javascript
 // ==============================
 // VARIABLE OTP
 // ==============================
@@ -294,3 +295,31 @@ function verificarOTP() {
     }
 
 }
+
+
+// ==============================
+// MOSTRAR / OCULTAR CONTRASEÑA
+// ==============================
+
+function mostrarPassword(id, boton) {
+
+    const campo =
+        document.getElementById(id);
+
+
+    if (campo.type === "password") {
+
+        campo.type = "text";
+
+        boton.textContent = "🙈";
+
+    } else {
+
+        campo.type = "password";
+
+        boton.textContent = "👁️";
+
+    }
+
+}
+```
